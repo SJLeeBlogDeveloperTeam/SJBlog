@@ -1,0 +1,2 @@
+django==1.9
+bootstrap-admin==0.3.6
