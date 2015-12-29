@@ -27,3 +27,11 @@ def detail(request, id):
 
 def test(request):
     return render(request, 'test.html', {'current_time': datetime.now()})
+
+
+def markdown(request):
+    """
+    :param request:
+    :return:
+    """
+    return render(request,'markdownDemo.html',{'viewBag':42})

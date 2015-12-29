@@ -16,10 +16,13 @@ Including another URLconf
 # coding:utf-8
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.staticfiles import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'Blog.views.home', name='home'),
     url(r'^(?P<id>\d+)/$', 'Blog.views.detail', name='detail'),
     url(r'^test/$', 'Blog.views.test', name='test'),
+    url(r'^markdown/$', 'Blog.views.markdown', name='markdown'),
+    url(r'^static/(?P<path>.*)$', views.serve),
 ]
